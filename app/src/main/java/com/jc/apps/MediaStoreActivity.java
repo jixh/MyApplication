@@ -47,26 +47,26 @@ public class MediaStoreActivity extends Activity {
         }
         cursor2.close();
 
-        String requestedColumns3[] = {
-                Browser.BookmarkColumns.TITLE,
-                Browser.BookmarkColumns.VISITS,
-                Browser.BookmarkColumns.BOOKMARK,
-        };
-        Cursor cursor3 = managedQuery(
-            Browser.BOOKMARKS_URI,
-                requestedColumns3,
-                Browser.BookmarkColumns.BOOKMARK + "=1"
-                ,null,
-                Browser.BookmarkColumns.VISITS +" DESC limit 6"
-        );
-
-        str.append("\n");
-        while (cursor3.moveToNext()){
-            str.append("\n"+cursor3.getString(cursor3.getColumnIndex(requestedColumns3[0])));
-            str.append(","+cursor3.getInt(cursor3.getColumnIndex(requestedColumns3[1])));
-            str.append(","+cursor3.getInt(cursor3.getColumnIndex(requestedColumns3[2])));
-        }
-        cursor3.close();
+//        String requestedColumns3[] = {
+//                Browser.BookmarkColumns.TITLE,
+//                Browser.BookmarkColumns.VISITS,
+//                Browser.BookmarkColumns.BOOKMARK,
+//        };
+//        Cursor cursor3 = managedQuery(
+//            Browser.BOOKMARKS_URI,
+//                requestedColumns3,
+//                Browser.BookmarkColumns.BOOKMARK + "=1"
+//                ,null,
+//                Browser.BookmarkColumns.VISITS +" DESC limit 6"
+//        );
+//
+//        str.append("\n");
+//        while (cursor3.moveToNext()){
+//            str.append("\n"+cursor3.getString(cursor3.getColumnIndex(requestedColumns3[0])));
+//            str.append(","+cursor3.getInt(cursor3.getColumnIndex(requestedColumns3[1])));
+//            str.append(","+cursor3.getInt(cursor3.getColumnIndex(requestedColumns3[2])));
+//        }
+//        cursor3.close();
 
 
 /*
